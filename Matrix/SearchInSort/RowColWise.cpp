@@ -1,4 +1,4 @@
-//Start to Bottom pointer approach
+//Top-Right  to left-Bottom  pointer approach
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
