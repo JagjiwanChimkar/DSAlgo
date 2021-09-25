@@ -1,6 +1,6 @@
 //https://practice.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1
-//Time Comp: O(R*C)
-//Space Comp: O(R*C)
+//Time Comp: O((r*c)log(r*c))
+//Space Comp: O(r*c)
 
 class Solution{   
 public:
