@@ -1,4 +1,6 @@
 //Top-Right  to left-Bottom  pointer approach
+//Time Comp: O(n)
+
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
