@@ -13,7 +13,7 @@ public:
         vector<int> leftSml(n);
         vector<int> rightSml(n);
         
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;i++){    //iterate from left to right
             
             while(!stk.empty() && heights[stk.top()]>=heights[i]){
                 stk.pop();
@@ -24,18 +24,18 @@ public:
             stk.push(i);
         }
        
-       while(!stk.empty()){
+       while(!stk.empty()){   //empty stack to reuse it
            stk.pop();
        }
         
-        for(int i=n-1;i>=0;i--){
+        for(int i=n-1;i>=0;i--){   //iterate from right to left
             
             while(!stk.empty() && heights[stk.top()]>=heights[i]){
                 stk.pop();
             }
             
-            rightSml[i]=stk.empty()?n-1:stk.top()-1;
-                
+            rightSml[i]=stk.empty()?n-1:stk.top()-1;  
+                 
             stk.push(i);
         }
         
