@@ -1,4 +1,4 @@
-//We first calculate leftSmaller and rightSmaller heights for ith element
+//We first calculate leftSmaller and rightSmaller heights for each ith element
 //and store it in its 2 separate Array
 //then check Max area rectangle by (rightSmaller-leftSmaller+1)*arr[i];
 
