@@ -3,6 +3,7 @@
 //then check Max area rectangle by (rightSmaller-leftSmaller+1)*arr[i];
 
 //Time Comp: O(n)
+//Space Comp:O(n)
 
 class Solution {
 public:
