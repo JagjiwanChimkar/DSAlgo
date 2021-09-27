@@ -1,5 +1,6 @@
 //https://leetcode.com/problems/largest-rectangle-in-histogram/
-//Time Comp: O(n^n)
+//Time Comp: O(n*n)
+
 class Solution {
 public:
     int left_smaller(vector<int>& heights,int st){
