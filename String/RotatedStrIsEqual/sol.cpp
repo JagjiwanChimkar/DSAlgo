@@ -4,12 +4,12 @@
 
 class Solution {
 public:
-    bool rotateString(string s, string goal) {
+    bool rotateString(string s1, string s2) {
         if(s.size()!=goal.size()){   //is size not equal
             return false;
         }
          
-        string tmp=s+s;                        //double of s
-        return tmp.find(goal)!=string::npos;   //check goal found in tmp or not
+        string tmp=s1+s1;                        //double of s1
+        return tmp.find(s2)!=string::npos;      //check s2 is substring in tmp or not
     }
 };
