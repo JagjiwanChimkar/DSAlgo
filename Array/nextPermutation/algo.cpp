@@ -5,6 +5,7 @@
 
 //Time Comp:O(n)
 //Space Comp: O(1)
+
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
@@ -16,7 +17,8 @@ public:
                 break;
             }
         }
-        if(ind1!=-1){
+        
+        if(ind1!=-1){                    //if nums is not sorted in desc order "5 4 3 2 1"
             for(int i=n-1;i>ind1;i--){
                 if(nums[i]>nums[ind1]){
                     ind2=i;
