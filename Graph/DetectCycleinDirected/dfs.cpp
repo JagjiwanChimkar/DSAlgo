@@ -12,7 +12,7 @@
         7    6->--5
        / ^
       8->-9
-      
+
 */
 
 #include<bits/stdc++.h>
@@ -69,7 +69,8 @@ int main(){
 
     vector<int> visited(10,0);
     vector<int> dfsvisited(10,0);
-    for(int i=1;i<10;i++){
+
+    for(int i=1;i<10;i++){         //As directed,to avoid block end
         if(!visited[i]){
             if(dfs(adj,i,10,visited,dfsvisited)){
                cout<<"Cycle Detected";
