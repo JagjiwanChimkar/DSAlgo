@@ -1,7 +1,7 @@
 //DFS
 //Use Recursion method
 
-//Time Comp:O(V+E)
+//Time Comp:O(V+E) with  Adjacency List and O(V^2) with Adjacency Matrix
 //Space Comp:O(V)
 
 /*
