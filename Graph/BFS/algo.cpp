@@ -2,9 +2,17 @@
 //Use Queue
 //Time Comp:O(V+E)
 //Space Comp:O(V)
+
+/*
+        1            3
+      /   \          |
+    10     8         7
+      \   /        /    \
+        9  ------ 0 ---- 10
+                     
+*/ 
 #include<bits/stdc++.h>
 using namespace std;
-
 
 void bfs(vector<int> adj[],int s,int n){
 
