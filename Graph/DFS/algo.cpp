@@ -1,44 +1,26 @@
-//BFS
-//Use Queue
+//DFS
+//Use Recursion method
+
 //Time Comp:O(V+E)
 //Space Comp:O(V)
 #include<bits/stdc++.h>
 using namespace std;
 
-
-void bfs(vector<int> adj[],int s,int n){
-
-    queue<int> q;
-    vector<int> visited(n,0);
-    
-    vector<int> ans;
-    
-    q.push(s);
+void dfs(vector<int> adj[],vector<int> &visited,int s,int n,vector<int> &ans){
+    ans.push_back(s);
     visited[s]=1;
-
-    while(!q.empty()){
-        int a=q.front();
-        ans.push_back(a);
-        q.pop();
-        for(auto i:adj[a]){
-            
-            if(!visited[i]){
-                visited[i]=1;
-                q.push(i);
-            }
+    for(auto i:adj[s]){
+        if(!visited[i]){
+            dfs(adj,visited,i,n,ans);
         }
     }
-    
-    for(auto i:ans){
-        cout<<i<<" ";
-    }
-    
 }
 
 void addEdge(vector<int> adj[],int u,int v){
     adj[u].push_back(v);
     adj[v].push_back(u);
 }
+
 
 
 int main(){
@@ -54,7 +36,12 @@ int main(){
     addEdge(adj,8,9);
     addEdge(adj,9,10);
     
-    bfs(adj,0,12);
+    vector<int> ans;
+    vector<int> visited(12,0);
+    dfs(adj,visited,0,12,ans);
     
+    for(auto i:ans){
+        cout<<i<<" ";
+    }
     return 0;
 }
