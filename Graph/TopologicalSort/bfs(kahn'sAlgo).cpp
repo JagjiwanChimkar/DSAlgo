@@ -24,7 +24,7 @@ void bfs(vector<int> adj[],vector<int> &Indegree,vector<int> &res,queue<int> q){
        
        for(auto i:adj[s]){
             
-           Indegree[i]--;
+           Indegree[i]--;        //Reduced the Indgree[i] once it traversed.
            
            if(!Indegree[i]){
                q.push(i);
