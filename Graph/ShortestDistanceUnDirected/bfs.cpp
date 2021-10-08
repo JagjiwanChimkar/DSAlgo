@@ -1,4 +1,5 @@
-//Find Shortest Distance of each node from src-node in UnDirected Graph
+//Find Shortest Distance of each node from src-node in UnDirected Graph 
+//Take Weight of each Edge as 1
 //Use BFS
 
 //Time Comp:O(V+E)
