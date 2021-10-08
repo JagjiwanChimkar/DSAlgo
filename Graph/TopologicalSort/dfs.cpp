@@ -1,4 +1,4 @@
-//Topological Sort  only on DAG
+//Topological Sorting using DFS only on DAG
 //Use Stack 
 
 //Time Comp:O(V+E)
@@ -26,6 +26,17 @@ void dfs(vector<int> adj[],int s,vector<int> &visited,stack<int> &stk){
    stk.push(s);
 }
 
+stack<int> TopoSort(vector<int> adj[],int n){
+    vector<int> visited(n,0);
+    stack<int> stk;
+    
+    for(int i=0;i<n;i++){
+        if(!visited[i]){
+            dfs(adj,i,visited,stk);
+        }
+    }
+    return stk;
+}
 void addEdge(vector<int> adj[],int u,int v){
     adj[u].push_back(v);
 }
@@ -55,14 +66,7 @@ int main(){
    
     //printGraph(adj, 6);
 
-    vector<int> visited(6,0);
-    stack<int> stk;
-    
-    for(int i=0;i<6;i++){
-        if(!visited[i]){
-            dfs(adj,i,visited,stk);
-        }
-    }
+    stack<int> stk=TopoSort(adj,6);
    
     while(!stk.empty()){
         cout<<stk.top()<<" ";
