@@ -2,7 +2,7 @@
 //Instead of Queue,We use Min Priority queue, As it take node with according to 
 //which one with shortest path from starting node. 
 
-//Time Comp:O(V+E)
+//Time Comp:O((V+E)logV)
 //Space Comp:O(V)
 
 /*
