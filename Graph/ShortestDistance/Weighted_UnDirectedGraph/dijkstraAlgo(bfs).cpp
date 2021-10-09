@@ -1,4 +1,4 @@
-//Dijkstra's Algo (BFS)
+//Dijkstra's Algo (BFS) on Weighted UnDirected Graph
 //Instead of Queue,We use Min Priority queue, As it take node with according to 
 //which one with shortest path from starting node. 
 
@@ -71,8 +71,8 @@ int main (){
   //printGraph(adj,6);
 
   vector<int> shortDist(6,INT_MAX);
-  
-  dijkstra(adj,1,shortDist);
+  int src=1;
+  dijkstra(adj,src,shortDist);
   
   cout<<"shortDist :";
   for(int i=1;i<shortDist.size();i++){
