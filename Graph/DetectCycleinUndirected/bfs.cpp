@@ -18,7 +18,7 @@
 using namespace std;
 
 void CheckCycle_bfs(vector<int> adj[],int s,int n){
-    queue<pair<int,int>> q;
+    queue<pair<int,int>> q;     // pair<current node,parent node>
     vector<int> visited(n,0);
     pair<int,int> p(s,-1);
     q.push(p);
