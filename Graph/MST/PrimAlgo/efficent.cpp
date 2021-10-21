@@ -2,7 +2,7 @@
 //Instead of iterating on key[] for finding vertex with minimum key[i]
 //use Min Priority Queue with pair<key[i],i>
 
-//Time Comp:O(V+E)
+//Time Comp:O((V+E)*logV)
 //Space Comp:O(V)
 
 

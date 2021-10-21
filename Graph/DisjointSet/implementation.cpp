@@ -1,3 +1,5 @@
+//union and findParent - Time Comp: O(logN)
+
 #include<bits/stdc++.h>
 using namespace std;
 
