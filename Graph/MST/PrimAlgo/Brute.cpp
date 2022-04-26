@@ -18,7 +18,7 @@ using namespace std;
 int find_min(vector<int> key,vector<bool> MST,int n){
     int res=INT_MAX;
     for(int i=0;i<n;i++){
-        if(key[i]<res){
+        if(MST[i]==false && key[i]<res){
             res=i;
         }
     }
